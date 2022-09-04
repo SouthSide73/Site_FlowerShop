@@ -1,7 +1,6 @@
 <p align="center">
-    <img width="500" src="logo.png" title="flower">
+    <img width="200" src="logo.png" title="flower">
 </p>
-
 <h2 align="center">Сайт на Django</h2>
 
 Магазин цветов на Django.
