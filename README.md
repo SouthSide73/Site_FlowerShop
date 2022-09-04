@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="100" src="logo.png" title="django">
+    <img width="500" src="logo.png" title="flower">
 </p>
 
 <h2 align="center">Сайт на Django</h2>
