@@ -1,0 +1,279 @@
+{% extends 'main.html' %}
+{% block content %}
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+              FlowerShop
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'index' %}">Главная страница <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}"> Наши услуги</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'gallery' %}"> Галерея </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">Связь с нами</a>
+                </li>
+              </ul>
+            </div>
+            <div class="quote_btn-container ">
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="slider_number-container ">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="col-lg-6 col-md-8">
+                  <div class="detail_box">
+                    <h2>
+                      Приветствуем в нашем
+                    </h2>
+                    <h1>
+                      FlowerShop
+                    </h1>
+                    <p>
+                      В нашем магазине вы можете найти самые лучшие и свежие цветы во всем Ульяновске
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-lg-6 col-md-8">
+                  <div class="detail_box">
+                    <h2>
+                      Приветствуем в нашем
+                    </h2>
+                    <h1>
+                      FlowerShop
+                    </h1>
+                    <p>
+                      В нашем магазине вы можете найти самые лучшие и свежие цветы во всем Ульяновске
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-lg-6 col-md-8">
+                  <div class="detail_box">
+                    <h2>
+                      Приветствуем в нашем
+                    </h2>
+                    <h1>
+                      FlowerShop
+                    </h1>
+                    <p>
+                      В нашем магазине вы можете найти самые лучшие и свежие цветы во всем Ульяновске
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section -->
+  <section class="about_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xl-7">
+          <div class="img-box">
+            <img src="static/images/about-img.png" alt="" />
+          </div>
+        </div>
+        <div class="col-md-5 col-xl-5">
+          {% for el in text %}
+          <div class="detail_box">
+            <div class="heading_container justify-content-end">
+              <h2>
+                Наши услуги
+              </h2>
+            </div>
+            <p>
+              {{ el.job }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+
+  <!-- why section -->
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="row">
+        {% for el in text %}
+        <div class="col-12">
+          <h2>
+            Почему мы
+          </h2>
+          <p>
+            {{ el.mission }}
+          </p>
+          <div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- gallery section -->
+  <section class="gallery_section layout_padding">
+    <div class="heading_container justify-content-center">
+      <h2>
+        Галерея
+      </h2>
+    </div>
+    <div class="container">
+      <div class="img_container">
+        <div class="box-1">
+          <div class="box-1-container">
+            <div class="b-1">
+              <div class="img-box">
+                <img src="static/images/g-1.jpg" alt="Flower">
+              </div>
+              <div class="img-box">
+                <img src="static/images/g-4.jpg" alt="">
+              </div>
+            </div>
+            <div class="b-2">
+              <div class="img-box">
+                <img src="static/images/g-2.jpg" alt="">
+              </div>
+              <div class="img-box">
+                <img src="static/images/g-5.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="b-3">
+            <div class="img-box">
+              <img src="static/images/g-7.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="box-2">
+          <div class="img-box">
+            <img src="static/images/g-3.jpg" alt="">
+          </div>
+          <div class="img-box">
+            <img src="static/images/g-6.jpg" alt="">
+          </div>
+          <div class="img-box flex-grow-1">
+            <img src="static/images/g-8.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end gallery section -->
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding">
+    <div class="container">
+      <div class="heading_container justify-content-center">
+        <h2>
+          Владельцы магазина
+        </h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="client_box">
+            <div class="detail_box">
+              <div class="img_box">
+                <img src="static/images/client-1.png">
+              </div>
+              <h5>
+                владимир
+              </h5>
+              <p>Наш магазин богат ассортиментом и широким спектром услуг </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="client_box">
+            <div class="detail_box">
+              <div class="img_box">
+                <img src="static/images/client-2.png">
+              </div>
+              <h5>
+                абдул
+              </h5>
+              <p>В нашем магазине царит уют, где каждый человек найдет то, что ему нужно </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end client section -->
+
+  <!-- arrange section -->
+
+  <section class="arrange_section">
+    <div class="container">
+      {% for el in text %}
+      <div class="detail_box">
+        <h2>
+          О компании
+        </h2>
+        <p>
+          {{ el.company }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+
+  <!-- end arrange section -->
+
+  <!-- map section -->
+
+  <script src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0495901e8a68c5fb05e743a91a0b4f979e0c1385a16d30d97e300e6db434e62a&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+  <!-- End Google Map -->
+
+
+{% endblock %}
